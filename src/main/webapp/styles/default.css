@@ -1,0 +1,174 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+#form-book {
+    padding: 20px;
+    height: calc(100vh - 180px);
+}
+
+.book-type {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    height: 100%;
+}
+
+.book-type button {
+    cursor: pointer;
+    font-size: 2rem;
+    color: #E7DFDD;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #000000;
+    filter: grayscale(100%);
+    transition: all 0.2s ease-in-out;
+}
+
+.book-type button:hover {
+    filter: grayscale(0%);
+}
+
+button[value=thriller] {
+    background-image: url("../images/thriller.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button[value=fantastic] {
+    background-image: url("../images/fantastique.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button[value=love] {
+    background-image: url("../images/amour.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+button[value=manga] {
+    background-image: url("../images/manga.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.books-container {
+    height: calc(100vh - 180px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    overflow-y: auto;
+}
+
+.book-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0E0B16;
+    color: white;
+    flex-direction: column;
+    width: 30%;
+    padding: 20px 10px;
+    border-radius: 5px;
+    gap: 10px;
+}
+
+.book-name {
+    color: #A239CA;
+}
+
+.book-author {
+    text-transform: uppercase;
+    opacity: 0.8;
+    font-size: 11px;
+}
+
+.book-description {
+    text-align: center;
+    font-size: 10px;
+}
+
+.book-price {
+    font-weight: bold;
+}
+
+.add-cart {
+    background: #4717F6;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.add-cart:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.add-cart:hover {
+    opacity: 0.5;
+}
+
+.cart-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 5px;
+    background: #0E0B16;
+    overflow-x: hidden;
+    padding: 0 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: #0E0B16;
+    color: white;
+    width: 100%;
+    padding: 30px 0;
+    border-radius: 5px;
+}
+
+.cart-item-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-item-left img {
+    width: 30px;
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 40px 20px;
+    color: #0E0B16;
+    margin: 0 auto;
+}
+
+.total-text {
+    font-weight: bold;
+}
