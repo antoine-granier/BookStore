@@ -132,6 +132,7 @@ button[value=manga] {
     background: #0E0B16;
     overflow-x: hidden;
     padding: 0 20px;
+    color: white;
 }
 
 .cart-item {

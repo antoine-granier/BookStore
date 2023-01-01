@@ -17,13 +17,18 @@
                 newLocal.push(book);
             }
         })
-        localStorage.setItem('cart', JSON.stringify(newLocal));
+        if(newLocal.length === 0) {
+            localStorage.removeItem("cart")
+        } else {
+            localStorage.setItem('cart', JSON.stringify(newLocal));
+        }
         loadCart();
     }
 
     function loadCart() {
         const cartList = document.getElementById("cart-list");
         const total = document.getElementById("total");
+        total.innerHTML = "";
         if (localStorage.getItem('cart') !== null && JSON.parse(localStorage.getItem('cart')).length !== 0) {
             const bookList = Array.from(JSON.parse(localStorage.getItem('cart')));
             let totalPrice = 0;
